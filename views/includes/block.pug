@@ -1,0 +1,64 @@
+.well(id='block'+block.block+'chain'+block.chain+'well')
+  form.form-horizontal
+
+    .form-group
+      label.col-sm-4.control-label(for='block'+block.block+'chain'+block.chain+'number') #{__('Block')}:
+      .col-sm-8
+        .input-group
+          span.input-group-addon #
+          input.form-control(id='block'+block.block+'chain'+block.chain+'number', type='number', value=block.block onchange='updateChain('+block.block+', '+block.chain+');' onkeyup='updateChain('+block.block+', '+block.chain+');')
+
+    .form-group
+      label.col-sm-4.control-label(for='block'+block.block+'chain'+block.chain+'nonce') #{__('Nonce')}:
+      .col-sm-8
+         input.form-control(id='block'+block.block+'chain'+block.chain+'nonce', type='text', value=block.nonce, onkeyup='updateChain('+block.block+', '+block.chain+');')
+
+    .form-group
+            label.col-sm-4.control-label(for='block'+block.block+'chain'+block.chain+'PID') #{__('PID')}:
+            .col-sm-8
+              input.form-control(id='block'+block.block+'chain'+block.chain+'PID', rows='1', value=block.PID, onkeyup='updateChain('+block.block+', '+block.chain+');')
+
+
+    .form-group
+            label.col-sm-4.control-label(for='block'+block.block+'chain'+block.chain+'Owner_SSN') #{__('Owner SSN')}:
+            .col-sm-8
+              input.form-control(id='block'+block.block+'chain'+block.chain+'Owner_SSN', rows='1', value=block.Owner_SSN, onkeyup='updateChain('+block.block+', '+block.chain+');')
+
+    .form-group
+            label.col-sm-4.control-label(for='block'+block.block+'chain'+block.chain+'RegisterYear') #{__('Register Year')}:
+            .col-sm-8
+              input.form-control(id='block'+block.block+'chain'+block.chain+'RegisterYear', rows='1', value=block.RegisterYear, onkeyup='updateChain('+block.block+', '+block.chain+');')
+
+    .form-group
+            label.col-sm-4.control-label(for='block'+block.block+'chain'+block.chain+'PurchasedAmount') #{__('Purchased Amount')}:
+            .col-sm-8
+              input.form-control(id='block'+block.block+'chain'+block.chain+'PurchasedAmount', rows='1', value=block.PurchasedAmount, onkeyup='updateChain('+block.block+', '+block.chain+');')
+
+    .form-group
+            label.col-sm-4.control-label(for='block'+block.block+'chain'+block.chain+'SoldYear') #{__('Sold Year')}:
+            .col-sm-8
+              input.form-control(id='block'+block.block+'chain'+block.chain+'SoldYear', rows='1', value=block.SoldYear, onkeyup='updateChain('+block.block+', '+block.chain+');')
+
+    .form-group
+            label.col-sm-4.control-label(for='block'+block.block+'chain'+block.chain+'SoldAmount') #{__('Sold Amount')}:
+            .col-sm-8
+              input.form-control(id='block'+block.block+'chain'+block.chain+'SoldAmount', rows='1', value=block.SoldAmount, onkeyup='updateChain('+block.block+', '+block.chain+');')
+
+
+
+    #state.form-group
+      label.col-sm-4.control-label(for='block'+block.block+'chain'+block.chain+'previous') #{__('Prev')}:
+      .col-sm-8
+        input.form-control(id='block'+block.block+'chain'+block.chain+'previous', type='text', value=block.previous, disabled)
+
+    #state.form-group
+      label.col-sm-4.control-label(for='block'+block.block+'chain'+block.chain+'hash') #{__('Hash')}:
+      .col-sm-8
+        input.form-control(id='block'+block.block+'chain'+block.chain+'hash', type='text', disabled)
+
+    .form-group
+      .col-sm-4
+        i.icon-spinner.icon-spin.icon-large
+      .col-sm-8
+        button.btn.btn-primary.ladda-button(id='block'+block.block+'chain'+block.chain+'mineButton', data-style='expand-right')
+          span.ladda-label #{__('Mine')}
