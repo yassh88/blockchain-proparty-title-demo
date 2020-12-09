@@ -29,5 +29,7 @@
 	"PurchasedAmount": "PurchasedAmount",
 	"SoldYear": "SoldYear",
 	"SoldAmount": "SoldAmount",
-	"HyperBlocks": "HyperBlocks"
+	"HyperBlocks": "HyperBlocks",
+	"Property Title Blockchain": "Property Title Blockchain",
+	"Property Title Distributed Blockchain": "Property Title Distributed Blockchain"
 }

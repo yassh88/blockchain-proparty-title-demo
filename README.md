@@ -41,7 +41,7 @@ http://localhost:3000
 Get the code:
 
 ```
-git clone https://github.com/anders94/blockchain-demo.git
+git clone https://github.com/yassh88/blockchain-proparty-title-demo
 ```
 
 Run the Docker setup:
@@ -70,7 +70,7 @@ assumes 4 zeros for a signed block. For example, on the `http://localhost:3000/b
 with a difficulty of 6, the first nonce that works is `8719932` yielding a hash of
 `000000669445c22167511857d8f3b822b331c3342f25dfdcb326e35c1a7aa267`. This gets out of hand fairly
 quickly though. Here's some time estimates at the various thresholds.
-
+PID: '12312313', Owner_SSN:'DSADFSDF', RegisterYear, '1920', PurchasedAmount: '$300', SoldYear: '1930', SoldAmount: '$500',  nonce: 22051,
 |digits|nonce|time estimate|
 |------|-------|-------------|
 |4|500,000|15 minutes
@@ -90,13 +90,3 @@ In the production bitcoin blockchain, block `458,091` has the hash digest
 `00000000000000000000011246f099d94f91628d71c9d75ad2f9a06e2beb7e92`. That's 21 zeros in a row!
 That one block would take this software approximately 8,454,989,768,407,765 years to mine.
 
-### Public Private Key Demo
-
-The 2nd part of the 101 session:
-* https://github.com/anders94/public-private-key-demo
-
-## Send Thanks
-
-![](public/images/qr.png)
-
-Bitcoin gratefully accepted: `1K3NvcuZzVTueHW1qhkG2Cm3viRkh2EXJp`

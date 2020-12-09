@@ -2,17 +2,17 @@ extends layout
 
 block content
   .container-fluid
-    h1 #{__('Distributed Blockchain')}
+    h1 #{__('Property Title Distributed Blockchain')}
     - var peers = {1: 'A', 2: 'B', 3: 'C'}
       each peer, chain in peers
         h3 #{__('Peer')} #{peer}
         .row.row-horizon
           - var blocks = []
-          - blocks.push({block: 1, chain: chain, nonce: 11316, previous: '0000000000000000000000000000000000000000000000000000000000000000'})
-          - blocks.push({block: 2, chain: chain, nonce: 35230, previous: '000015783b764259d382017d91a36d206d0600e2cbb3567748f46a33fe9297cf'})
-          - blocks.push({block: 3, chain: chain, nonce: 12937, previous: '000012fa9b916eb9078f8d98a7864e697ae83ed54f5146bd84452cdafd043c19'})
-          - blocks.push({block: 4, chain: chain, nonce: 35990, previous: '0000b9015ce2a08b61216ba5a0778545bf4ddd7ceb7bbd85dd8062b29a9140bf'})
-          - blocks.push({block: 5, chain: chain, nonce: 56265, previous: '0000ae8bbc96cf89c68be6e10a865cc47c6c48a9ebec3c6cad729646cefaef83'})
+          - blocks.push({block: 1, chain: chain, PID: '0001', Owner_SSN:'AAAA', RegisterYear: '1920', PurchasedAmount: '$300', SoldYear: '1930', SoldAmount: '$500',  nonce: 52739, previous: '0000000000000000000000000000000000000000000000000000000000000000'})
+          - blocks.push({block: 2, chain: chain, PID: '0001', Owner_SSN:'AAAB', RegisterYear: '1930', PurchasedAmount: '$500', SoldYear: '1930', SoldAmount: '$1000',  nonce: 20845, previous: '0000809719305770a349b3aa73f76931a6019acb552cd527e6f8c3816a87707c'})
+          - blocks.push({block: 3, chain: chain, PID: '0001', Owner_SSN:'AAAC', RegisterYear: '1940', PurchasedAmount: '$1000', SoldYear: '1930', SoldAmount: '$3000',  nonce: 13295, previous: '000093463b00aa93c31277d62b07256ac40bba4a94bf333ce70e2c338dc047a8'})
+          - blocks.push({block: 4, chain: chain, PID: '0001', Owner_SSN:'AAAD', RegisterYear: '1950', PurchasedAmount: '$3000', SoldYear: '1930', SoldAmount: '$6000',  nonce: 136170, previous: '0000cdec361c620420f6ba4e315daa53742a2b9f4c8c2f811c3a2885ce18a30b'})
+          - blocks.push({block: 5, chain: chain, PID: '0001', Owner_SSN:'AAAE', RegisterYear: '1960', PurchasedAmount: '$6000', SoldYear: '1930', SoldAmount: '$10000',  nonce: 154330, previous: '0000fb680884b63ca6d77d0dd7dcab9f5acf04992c5e4c664b672817227dc38f'})
           each block in blocks
             .col-xs-7
               include includes/block
